@@ -40,8 +40,8 @@ jobs:
       env:
         GH_PAGES_TOKEN: ${{ secrets.GH_PAGES_TOKEN }}
       run: |
-          git config --global user.email "you@example.com"
-          git config --global user.name "Your Name"
+          git config --global user.email "styrkink@gmail.com"
+          git config --global user.name "styrkink"
           git add .
           git commit -m "Update Allure report"
           git push -f origin gh-pages

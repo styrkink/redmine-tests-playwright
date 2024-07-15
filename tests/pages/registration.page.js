@@ -1,11 +1,11 @@
-const userLoginField = '#user_login';
-const userPasswordField = '#user_password';
-const userPasswordConfirmationField = '#user_password_confirmation';
-const userFirstNameField = '#user_firstname';
-const userLastNameField = '#user_lastname';
-const userEmailField = '#user_mail';
+const userLoginField = "#user_login";
+const userPasswordField = "#user_password";
+const userPasswordConfirmationField = "#user_password_confirmation";
+const userFirstNameField = "#user_firstname";
+const userLastNameField = "#user_lastname";
+const userEmailField = "#user_mail";
 const submitFormButton = 'input[type="submit"]';
-const errorMessageSelector = '#errorExplanation';
+const errorMessageSelector = "#errorExplanation";
 
 class RegistrationPage {
   constructor(page) {
@@ -15,10 +15,13 @@ class RegistrationPage {
   async fillRegistrationForm(user) {
     await this.page.fill(userLoginField, user.username);
     if (user.password.length >= 8) {
-      await this.page.fill(userPasswordField, user.password)
-    };
+      await this.page.fill(userPasswordField, user.password);
+    }
     if (user.passwordConfirmation !== undefined) {
-      await this.page.fill(userPasswordConfirmationField, user.passwordConfirmation);
+      await this.page.fill(
+        userPasswordConfirmationField,
+        user.passwordConfirmation
+      );
     } else {
       await this.page.fill(userPasswordConfirmationField, user.password);
     }
@@ -34,7 +37,6 @@ class RegistrationPage {
   async getErrorMessage() {
     return await this.page.textContent(errorMessageSelector);
   }
-
 }
 
 module.exports = RegistrationPage;

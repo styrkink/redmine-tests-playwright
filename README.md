@@ -11,7 +11,7 @@ This is the repo of test cases for the redmine.org website, including cases for 
 
 ## Steps to Install
 ### 1. Clone the repository
-`git clone https://github.com/your-username/your-repo.git
+`git clone https://github.com/styrkink/redmine-tests-playwright.git
 cd your-repo`
 ### 2. Install dependencies
 `npm install`

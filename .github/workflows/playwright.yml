@@ -37,14 +37,16 @@ jobs:
     - name: Copy Allure report to gh-pages branch
       run: cp -r allure-report/* .
     - name: Commit and push Allure report to gh-pages branch
+      env:
+        GH_PAGES_TOKEN: ${{ secrets.GH_PAGES_TOKEN }}
       run: |
-          git config --global user.email "styrkink@gmail.com"
-          git config --global user.name "styrkink"
+          git config --global user.email "you@example.com"
+          git config --global user.name "Your Name"
           git add .
           git commit -m "Update Allure report"
           git push -f origin gh-pages
     - name: Setup GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GH_PAGES_TOKEN }}
           publish_dir: ./allure-report

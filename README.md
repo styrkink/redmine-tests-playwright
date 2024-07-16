@@ -20,8 +20,6 @@ cd your-repo`
 `npm install -g allure-commandline --save-dev`
 - Mac OS:
 `brew install -g allure-commandline --save-dev`
-### 4. Install faker.js
-`npm install playwright @faker-js/faker`
 
 ## Steps to Launch
 ### 1. Run Playwright tests

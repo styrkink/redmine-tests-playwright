@@ -2,7 +2,17 @@
   "name": "luxequality-task2",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test" : "npx playwright test",
+    "test:chromium" : "npx playwright test --project chromium",
+    "test:webkit" : "npx playwright test --project webkit",
+    "test:firefox" : "npx playwright test --project firefox",
+    "test:login" : "npx playwright test tests/specs/login.spec.js",
+    "test:registration" : "npx playwright test tests/specs/registration.spec.js",
+    "test:allure" : "npx playwright test --reporter=allure-playwright",
+    "allure:results" : "allure generate allure-results --clean",
+    "allure:report" : "allure open allure-report"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

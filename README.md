@@ -20,18 +20,18 @@ cd your-repo`
 `npm install -g allure-commandline --save-dev`
 - Mac OS:
 `brew install -g allure-commandline --save-dev`
-### 4. Install faker.js
-`npm install playwright @faker-js/faker`
 
 ## Steps to Launch
 ### 1. Run Playwright tests
-`npx playwright test`
+`npm run test`
+other specified test run commands are described in package file
+
 ### 2. Run Playwright tests with Allure reporter
-`npx playwright test --reporter=allure-playwright`
+`npm run test:allure`
 
 ## Steps to creating the report
 ### 1. Generate Allure report
-`allure generate allure-results --clean`
+`npm run allure:results`
 ### 2. Open Allure report in a browser
-`allure open allure-report`
+`npm run allure:report`
 
